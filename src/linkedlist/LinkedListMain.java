@@ -30,5 +30,8 @@ public class LinkedListMain {
         linkedListObj2.display();
         System.out.println("Search for a node with key 30 in the linked list");
         linkedListObj1.search(30);
+        System.out.println("Insert a node 40 after 30 in the linked list");
+        linkedListObj1.insertAfterNode(30,40);
+        linkedListObj1.display();
     }
-}
+    }

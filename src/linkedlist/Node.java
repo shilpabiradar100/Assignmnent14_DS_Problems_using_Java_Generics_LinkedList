@@ -1,6 +1,7 @@
 package linkedlist;
 
 public class Node<T>{
+
     public T data;
     public Node<T> next;
     //constructor
@@ -17,5 +18,4 @@ public class Node<T>{
     {
         this.data = data;
     }
-
 }
