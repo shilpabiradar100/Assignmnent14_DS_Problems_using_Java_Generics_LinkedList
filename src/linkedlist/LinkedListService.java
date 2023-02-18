@@ -58,4 +58,15 @@ public class LinkedListService<T> {
         head = head.next;
         return tempNode.data;
     }
+    //Method to delete last element in the linked list
+    public T popLast()
+    {
+        Node<T> tempNode = head;
+        while(tempNode.next.next!= null)
+        {
+            tempNode = tempNode.next;
+        }
+        tempNode.next = null;
+        return tempNode.data;
+    }
 }

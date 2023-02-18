@@ -3,19 +3,13 @@ package linkedlist;
 public class LinkedListMain {
     public static void main(String[] args)
     {
-        LinkedListService<Integer>linkedListObj = new LinkedListService<Integer>();
-        System.out.println("Create a simple linked list");
-        linkedListObj.add(56);
-        linkedListObj.add(30);
-        linkedListObj.add(70);
-        linkedListObj.display();
-        System.out.println("Using add method");
         LinkedListService<Integer>linkedListObj1 = new LinkedListService<Integer>();
-        linkedListObj1.add(70);
-        linkedListObj1.add(30);
+        System.out.println("Create a linked list using add method");
         linkedListObj1.add(56);
+        linkedListObj1.add(30);
+        linkedListObj1.add(70);
         linkedListObj1.display();
-        System.out.println("Using append method");
+        System.out.println("Create a linked list using append method");
         LinkedListService<Integer>linkedListObj2 = new LinkedListService<Integer>();
         linkedListObj2.append(56);
         linkedListObj2.append(30);
@@ -30,5 +24,8 @@ public class LinkedListMain {
         System.out.println("Delete the first element in the linked list");
         linkedListObj3.pop();
         linkedListObj3.display();
+        System.out.println("Delete the last element in the linked list");
+        linkedListObj2.popLast();
+        linkedListObj2.display();
     }
 }
