@@ -4,6 +4,7 @@ public class LinkedListMain {
     public static void main(String[] args)
     {
         LinkedListService<Integer>linkedListObj = new LinkedListService<Integer>();
+        System.out.println("Create a simple linked list");
         linkedListObj.add(56);
         linkedListObj.add(30);
         linkedListObj.add(70);
@@ -25,6 +26,9 @@ public class LinkedListMain {
         linkedListObj3.append(56);
         linkedListObj3.append(70);
         linkedListObj3.insertAfter(linkedListObj3.head,30);
+        linkedListObj3.display();
+        System.out.println("Delete the first element in the linked list");
+        linkedListObj3.pop();
         linkedListObj3.display();
     }
 }

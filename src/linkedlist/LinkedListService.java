@@ -47,4 +47,15 @@ public class LinkedListService<T> {
         }
         System.out.println(tempNode.data);
     }
+    //Method to delete first element in the linked list
+    public T pop()
+    {
+        if (head == null)
+        {
+            return null;
+        }
+        Node<T> tempNode = head;
+        head = head.next;
+        return tempNode.data;
+    }
 }
