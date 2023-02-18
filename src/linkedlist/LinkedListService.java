@@ -103,4 +103,28 @@ public class LinkedListService<T> {
         newNode.next = tempNode.next;
         tempNode.next = newNode;
     }
+    //Method to delete a node from the linked list
+    public void deleteNode(T key)
+    {
+        Node<T> tempNode = head;
+        Node<T> prevNode = head;
+        while(tempNode.data != key)
+        {
+            prevNode = tempNode;
+            tempNode = tempNode.next;
+        }
+        prevNode.next = tempNode.next;
+    }
+    //Method to calculate size of linked list
+    public void size()
+    {
+        Node<T> tempNode = head;
+        int count = 0;
+        while (tempNode != null)
+        {
+            count++;
+            tempNode = tempNode.next;
+        }
+        System.out.println("Size of the linked list is: "+count);
+    }
 }
