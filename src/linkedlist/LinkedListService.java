@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class LinkedListService<T> {
+public class LinkedListService<T extends Comparable<T>> {
 
     Node<T> head;
     //Method to add nodes at the front in the linked list
@@ -126,5 +126,34 @@ public class LinkedListService<T> {
             tempNode = tempNode.next;
         }
         System.out.println("Size of the linked list is: "+count);
+    }
+    //Method to create ordered linked list
+    public void sortList()
+    {
+        Node<T> current= head;
+        Node<T> index = null;
+        T temp;
+        if (head == null)
+        {
+            return;
+        }
+        else
+        {
+            while(current != null)
+            {
+                index = current.next;
+                while(index != null)
+                {
+                    if((current.data).compareTo(index.data) > 0)
+                    {
+                        temp = current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
     }
 }

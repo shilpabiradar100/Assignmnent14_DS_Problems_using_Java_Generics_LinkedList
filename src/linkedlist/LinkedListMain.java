@@ -36,6 +36,9 @@ public class LinkedListMain {
         linkedListObj1.deleteNode(40);
         linkedListObj1.display();
         linkedListObj1.size();
+        System.out.println("Ordered linked list is ascending order:");
+        linkedListObj1.insertAfterNode(30,40);
+        linkedListObj1.sortList();
+        linkedListObj1.display();
     }
-
-    }
+}
