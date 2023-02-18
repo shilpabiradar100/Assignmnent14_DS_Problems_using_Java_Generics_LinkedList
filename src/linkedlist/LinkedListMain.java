@@ -20,6 +20,11 @@ public class LinkedListMain {
         linkedListObj2.append(30);
         linkedListObj2.append(70);
         linkedListObj2.display();
-
+        System.out.println("Insert a node 30 between 56 and 70");
+        LinkedListService<Integer>linkedListObj3 = new LinkedListService<Integer>();
+        linkedListObj3.append(56);
+        linkedListObj3.append(70);
+        linkedListObj3.insertAfter(linkedListObj3.head,30);
+        linkedListObj3.display();
     }
 }

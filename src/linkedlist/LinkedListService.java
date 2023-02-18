@@ -1,8 +1,7 @@
 package linkedlist;
 
 public class LinkedListService<T> {
-
-    private Node<T> head;
+    Node<T> head;
     //Method to add nodes at the front in the linked list
     public void add(T data)
     {
@@ -28,6 +27,14 @@ public class LinkedListService<T> {
             }
             tempNode.next = newNode;
         }
+    }
+    //Method to insert a node between two nodes
+    public void insertAfter(Node<T> prevNode, T data)
+    {
+        Node <T> newNode = new Node<T>(data);
+        newNode.data = data;
+        newNode.next = prevNode.next;
+        prevNode.next = newNode;
     }
     //Method to display linked list
     public void display()
