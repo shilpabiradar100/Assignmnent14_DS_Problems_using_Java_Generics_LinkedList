@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class LinkedListService<T extends Comparable<T>> {
+public class LinkedListService<T> {
 
     private Node<T> head;
     //Method to add nodes at front in the linked list
@@ -15,10 +15,11 @@ public class LinkedListService<T extends Comparable<T>> {
     public void display()
     {
         Node<T> tempNode = head;
-        while(tempNode != null)
+        while(tempNode.next != null)
         {
-            System.out.println(tempNode.data);
-            tempNode = tempNode.next;
+            System.out.print(tempNode.data +" -> ");
+            tempNode= tempNode.next;
         }
+        System.out.println(tempNode.data);
     }
 }
