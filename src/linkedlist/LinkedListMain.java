@@ -1,6 +1,7 @@
 package linkedlist;
 
 public class LinkedListMain {
+
     public static void main(String[] args)
     {
         LinkedListService<Integer>linkedListObj1 = new LinkedListService<Integer>();
@@ -27,5 +28,7 @@ public class LinkedListMain {
         System.out.println("Delete the last element in the linked list");
         linkedListObj2.popLast();
         linkedListObj2.display();
+        System.out.println("Search for a node with key 30 in the linked list");
+        linkedListObj1.search(30);
     }
 }

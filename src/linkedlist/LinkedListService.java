@@ -1,6 +1,7 @@
 package linkedlist;
 
 public class LinkedListService<T> {
+
     Node<T> head;
     //Method to add nodes at the front in the linked list
     public void add(T data)
@@ -69,4 +70,25 @@ public class LinkedListService<T> {
         tempNode.next = null;
         return tempNode.data;
     }
+    //Method to search for a key in the linked list
+    public void search (T key)
+    {
+        boolean keyFound = false;
+        Node<T> tempNode = head;
+        while(tempNode != null)
+        {
+            if(tempNode.data == key)
+            {
+                System.out.println("Key found");
+                keyFound = true;
+
+            }
+            tempNode = tempNode.next;
+        }
+        if(keyFound == false)
+        {
+            System.out.println("Key is not found");
+        }
+    }
+
 }
